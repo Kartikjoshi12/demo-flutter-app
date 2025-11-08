@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:myapp/pracfol/bottom.dart';
+import 'package:myapp/pracfol/LogInForm.dart';
 
 class Splachscreen extends StatefulWidget {
   const Splachscreen({super.key});
@@ -11,23 +11,24 @@ class Splachscreen extends StatefulWidget {
 }
 
 class _SplachscreenState extends State<Splachscreen> {
-@override
+  @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    Timer(Duration(seconds: 5),
-    ()=> Navigator.of(context).pushReplacement(MaterialPageRoute(
-      builder: (BuildContext context)=>BottomMenu()))
+    Timer(
+      Duration(seconds: 5),
+      () => Navigator.of(context).pushReplacement(
+        MaterialPageRoute(builder: (BuildContext context) => LogInForm()),
+      ),
     );
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-              body: Center(
-                child: Text("Company Logo" , style: TextStyle(fontSize: 50.0), ),
-              
-              ),
+      body: Center(
+        child: Text("Company Logo", style: TextStyle(fontSize: 50.0)),
+      ),
     );
   }
 }

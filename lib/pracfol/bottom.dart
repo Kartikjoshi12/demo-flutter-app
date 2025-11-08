@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/pracfol/Servicespage.dart';
 import 'package:myapp/pracfol/detail.dart';
 import 'package:myapp/pracfol/home.dart';
-import 'package:myapp/pracfol/samplepages.dart';
 
 class BottomMenu extends StatefulWidget {
   @override
@@ -11,7 +11,7 @@ class BottomMenu extends StatefulWidget {
 }
 
 class _BottomMenuState extends State<BottomMenu> {
-  var _pageslist = [HomePage(), Detail(), ServicePage()];
+  var _pageslist = [HomePage(), Detail(), ServicesPage()];
   int _selectedItem = 0;
   @override
   Widget build(BuildContext context) {

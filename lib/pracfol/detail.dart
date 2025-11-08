@@ -12,11 +12,11 @@ class Detail extends StatelessWidget {
         height: 100,
         width: double.infinity,
         color: Colors.amber,
-        child: Center(child: Text("loginscreen"))),),
+        child: Center(child: Text("About Us"))),),
               body: Center(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[ Text("details " , 
+                  children: <Widget>[ Text("Back" , 
                   style: TextStyle(fontSize: 30.0),),
                   FloatingActionButton(
                     child: Icon(Icons.arrow_back),
