@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/pracfol/LogInForm.dart';
 import 'package:myapp/pracfol/samplepages.dart';
 
 class loginscreen extends StatefulWidget {
@@ -27,9 +28,9 @@ class _loginscreenState extends State<loginscreen> {
             padding: const EdgeInsets.all(16.0),
             child: InkWell(
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>SettingPage()));
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>LogInForm()));
               },
-              child: Text("login screen",style: TextStyle(color: Colors.white,fontSize: 16),)),
+              child: Text("login again ",style: TextStyle(color: Colors.white,fontSize: 16),)),
           )),
         ),
       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/pracfol/LogInForm.dart';
 import 'package:myapp/pracfol/bottom.dart';
 import 'package:myapp/pracfol/loginscreen.dart';
 import 'package:myapp/pracfol/samplepages.dart';
@@ -51,6 +52,16 @@ class MyDrawerPage extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => SettingPage()),
+              );
+            },
+          ),
+               ListTile(
+            leading: Icon(Icons.login),
+            title: Text("LogIn"),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => LogInForm()),
               );
             },
           ),
