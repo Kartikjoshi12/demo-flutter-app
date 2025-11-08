@@ -18,12 +18,12 @@ class _loginscreenState extends State<loginscreen> {
         height: 100,
         width: double.infinity,
         color: Colors.amber,
-        child: Center(child: Text("loginscreen"))),),
+        child: Center(child: Text("log Out Screen"))),),
       body: Center(
         child: Container(
           height: 200,
           width: 200,
-          color: Colors.brown,
+          color: const Color.fromARGB(255, 204, 194, 191),
           child: Center(child: Padding(
             padding: const EdgeInsets.all(16.0),
             child: InkWell(

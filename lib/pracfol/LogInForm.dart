@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/pracfol/bottom.dart';
 
 class LogInForm extends StatefulWidget {
   const LogInForm({super.key});
@@ -43,7 +44,7 @@ class _LogInFormState extends State<LogInForm> {
             ),
             const SizedBox(height: 20),
             ElevatedButton(
-              onPressed: () {
+              onPressed: () { 
                 setState(() {
                   String email = _emailController.text.trim();
                   String password = _passwordController.text.trim();
@@ -54,6 +55,7 @@ class _LogInFormState extends State<LogInForm> {
                     message = "✅ Logged in as: $email";
                   }
                 });
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>BottomMenu()));
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.amber,
