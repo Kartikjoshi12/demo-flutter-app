@@ -22,6 +22,10 @@ class _MyUserInfoPageState extends State<MyUserInfoPage> {
             padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
 
             itemCount: userinfo.length,
+
+            shrinkWrap: true, 
+            physics: NeverScrollableScrollPhysics(), 
+            
             itemBuilder: (context, index) {
               return Container(
                 padding: const EdgeInsets.symmetric(

@@ -49,16 +49,19 @@ class _LogInFormState extends State<LogInForm> {
                   String email = _emailController.text.trim();
                   String password = _passwordController.text.trim();
 
-                  if (email.isEmpty || password.isEmpty) {
-                    message = "⚠️ Please enter both email and password";
+                  if ((email.isNotEmpty && email == "kartik@gmail.com") && (password.isNotEmpty&& password == "12345")) {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => BottomMenu()),
+                    );
                   } else {
-                    message = "✅ Logged in as: $email";
+                    message = "Wrong Email or Password";
                   }
                 });
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => BottomMenu()),
-                );
+                // Navigator.push(
+                //   context,
+                //   MaterialPageRoute(builder: (context) => BottomMenu()),
+                // );
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.amber,

@@ -23,6 +23,8 @@ class _MyHomePostState extends State<MyHomePost> {
         if (snapshot.hasData) {
           return ListView.builder(
             itemCount: samplepost.length,
+            shrinkWrap: true, // 👈 important
+            physics: const NeverScrollableScrollPhysics(),
             itemBuilder: (context, index) {
               return Container(
                 height: 130,
