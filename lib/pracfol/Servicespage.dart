@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/pracfol/UserInfoPage.dart';
 // import 'package:getwidget/components/accordion/gf_accordion.dart';
 
 class ServicesPage extends StatelessWidget {
@@ -7,17 +8,8 @@ class ServicesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("OUR SERVICES"),),
-      body: Container(
-        child: Column(
-          children: <Widget>[
-            // GFAccordion(
-            //   title: "this is head ",
-            //   content: "dqjkdbdihadoiiowpqwwjiqehiqhoifwefowefhwefhwfgowefohou",
-            // )
-          ],
-        ),
-      ),
+      appBar: AppBar(title: Text("OUR SERVICES")),
+      body: MyUserInfoPage(),
     );
   }
 }

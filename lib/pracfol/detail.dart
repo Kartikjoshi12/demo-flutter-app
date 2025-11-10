@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/pracfol/UserInfoPage.dart';
+import 'package:getwidget/components/accordion/gf_accordion.dart';
 
 class Detail extends StatelessWidget {
   @override
@@ -19,19 +19,50 @@ class Detail extends StatelessWidget {
           child: Center(child: Text("About Us")),
         ),
       ),
-      body: MyUserInfoPage(),
-      // Center(
-      //   child: Column(
-      //     mainAxisAlignment: MainAxisAlignment.center,
-      //     children: <Widget>[
-      //       Text("Back", style: TextStyle(fontSize: 30.0)),
-      //       FloatingActionButton(
-      //         child: Icon(Icons.arrow_back),
-      //         onPressed: () => Navigator.pop(context),
-      //       ),
-      //     ],
-      //   ),
-      // ),
+      body: Center(
+        child: Container(
+          child: Column(
+            children: <Widget>[
+              GFAccordion(
+                title:
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                content:
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam consectetur quis eros sed elementum. Sed lacinia pretium magna at luctus. Proin accumsan, mi eget dignissim tincidunt, orci sem scelerisque tortor, nec dictum mi nulla placerat velit.',
+              ),
+
+              GFAccordion(
+                title: 'Lorem ipsum dolor sit amet,.',
+                content:
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Proin accumsan, mi eget dignissim tincidunt, orci sem scelerisque tortor, nec dictum mi nulla placerat velit.',
+              ),
+
+              GFAccordion(
+                title: 'Lorem ipsum dolor sit amet,.',
+                content:
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Proin accumsan, mi eget dignissim tincidunt, orci sem scelerisque tortor, nec dictum mi nulla placerat velit.',
+              ),
+              GFAccordion(
+                title:
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                content:
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam consectetur quis eros sed elementum. Sed lacinia pretium magna at luctus. Proin accumsan, mi eget dignissim tincidunt, orci sem scelerisque tortor, nec dictum mi nulla placerat velit.',
+              ),
+
+              GFAccordion(
+                title: 'Lorem ipsum dolor sit amet,.',
+                content:
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Proin accumsan, mi eget dignissim tincidunt, orci sem scelerisque tortor, nec dictum mi nulla placerat velit.',
+              ),
+
+              GFAccordion(
+                title: 'Lorem ipsum dolor sit amet,.',
+                content:
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Proin accumsan, mi eget dignissim tincidunt, orci sem scelerisque tortor, nec dictum mi nulla placerat velit.',
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/pracfol/Carasol.dart';
 import 'package:myapp/pracfol/HomePost.dart';
+import 'package:myapp/pracfol/SnakBar.dart';
 import 'package:myapp/pracfol/drawer.dart';
 
 class HomePage extends StatelessWidget {
@@ -19,6 +20,8 @@ class HomePage extends StatelessWidget {
         children: [
         MyCarasol(), 
         SizedBox(height: 10), 
+        SnackBarDemo(),
+                SizedBox(height: 10),
        MyHomePost(),
         ],
       ),
