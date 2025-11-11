@@ -2,11 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:myapp/pracfol/LogInForm.dart';
 import 'package:myapp/pracfol/bottom.dart';
 import 'package:myapp/pracfol/loginscreen.dart';
+import 'package:myapp/pracfol/profilepage.dart';
 import 'package:myapp/pracfol/samplepages.dart';
 
-class MyDrawerPage extends StatelessWidget {
+class MyDrawerPage extends StatefulWidget {
   const MyDrawerPage({super.key});
 
+  @override
+  State<MyDrawerPage> createState() => _MyDrawerPageState();
+}
+
+class _MyDrawerPageState extends State<MyDrawerPage> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -19,9 +25,12 @@ class MyDrawerPage extends StatelessWidget {
             margin: EdgeInsets.only(top: 40),
             child: Column(
               children: <Widget>[
-                CircleAvatar(
-                  radius: 50,
-                  backgroundImage: NetworkImage("https://i.pravatar.cc/300"),
+              InkWell(
+                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context)=>MyProfilePage())),
+                  child: CircleAvatar(
+                    radius: 50,
+                    backgroundImage: NetworkImage("https://i.pravatar.cc/300"),
+                  ),
                 ),
                 SizedBox(height: 10),
                 Text(
@@ -29,7 +38,7 @@ class MyDrawerPage extends StatelessWidget {
                   style: TextStyle(color: Colors.white, fontSize: 20),
                 ),
                 Text(
-                  "kartik@example.com",
+                  "kartik@example.",
                   style: TextStyle(color: Colors.white70, fontSize: 14),
                 ),
               ],
