@@ -51,7 +51,7 @@ class _MyUserInfoPageState extends State<MyUserInfoPage> {
                     getText(index, 'Email: ', userinfo[index].email.toString()),
                     getText(
                       index,
-                      'Email: ',
+                      'Address: ',
                       '${userinfo[index].address.suite.toString()},${userinfo[index].address.street.toString()},${userinfo[index].address.city.toString()},${userinfo[index].address.zipcode.toString()}',
                     ),
                     getText(index, 'Phone: ', userinfo[index].phone.toString()),
@@ -82,7 +82,7 @@ class _MyUserInfoPageState extends State<MyUserInfoPage> {
           ),
           TextSpan(text: content, style: TextStyle(fontSize: 13)),
         ],
-      ),
+      ),  
     );
   }
 

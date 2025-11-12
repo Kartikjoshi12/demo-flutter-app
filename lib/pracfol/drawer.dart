@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/pracfol/LogInForm.dart';
+import 'package:myapp/pracfol/To_do.dart';
 import 'package:myapp/pracfol/bottom.dart';
 import 'package:myapp/pracfol/loginscreen.dart';
 import 'package:myapp/pracfol/profilepage.dart';
-import 'package:myapp/pracfol/samplepages.dart';
-
 class MyDrawerPage extends StatefulWidget {
   const MyDrawerPage({super.key});
 
@@ -55,12 +54,12 @@ class _MyDrawerPageState extends State<MyDrawerPage> {
             },
           ),
           ListTile(
-            leading: Icon(Icons.settings),
-            title: Text("Settings"),
+            leading: Icon(Icons.list),
+            title: Text("TO Do List"),
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => SettingPage()),
+                MaterialPageRoute(builder: (context) => MyTodoList()),
               );
             },
           ),

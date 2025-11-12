@@ -13,7 +13,6 @@ class Splachscreen extends StatefulWidget {
 class _SplachscreenState extends State<Splachscreen> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     Timer(
       Duration(seconds: 5),
