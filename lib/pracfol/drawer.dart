@@ -4,6 +4,7 @@ import 'package:myapp/pracfol/To_do.dart';
 import 'package:myapp/pracfol/bottom.dart';
 import 'package:myapp/pracfol/loginscreen.dart';
 import 'package:myapp/pracfol/profilepage.dart';
+import 'package:myapp/pracfol/provider.dart';
 class MyDrawerPage extends StatefulWidget {
   const MyDrawerPage({super.key});
 
@@ -60,6 +61,17 @@ class _MyDrawerPageState extends State<MyDrawerPage> {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => MyTodoList()),
+              );
+            },
+          ),
+
+            ListTile(
+            leading: Icon(Icons.countertops_sharp),
+            title: Text("Counter"),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => MyProviderExamp()),
               );
             },
           ),
