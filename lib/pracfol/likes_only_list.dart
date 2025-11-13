@@ -1,31 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/pracfol/likes_only_list.dart';
 import 'package:provider/provider.dart';
 import 'package:myapp/provider/favourite_provider.dart';
-
-class LikeList extends StatelessWidget {
-  const LikeList({super.key});
+class LikedOnlyList extends StatefulWidget {
+  const LikedOnlyList({super.key});
 
   @override
+  State<LikedOnlyList> createState() => _LikedOnlyListState();
+}
+
+class _LikedOnlyListState extends State<LikedOnlyList> {
+  @override
   Widget build(BuildContext context) {
+    final favcountlist = Provider.of<FavouriteValueprovider>(context);
     return Scaffold(
       appBar: AppBar(
-        title: Text("Items List"),
-        actions: [
-          InkWell(
-            onTap: (){
-              Navigator.push(context,MaterialPageRoute(builder: (context)=>LikedOnlyList()));
-            },
-            child: Icon(Icons.favorite,
-            color: Colors.red),
-          ),
-          SizedBox(width: 20.0,),
-        ],
+        title: Text("Liked Items"),
         ),
 
       body: ListView.builder(
 
-        itemCount: 100,
+        itemCount:favcountlist.selected.length,
 
         itemBuilder: (context, index) {
 
@@ -50,4 +44,5 @@ class LikeList extends StatelessWidget {
       ),
     );
   }
+
 }

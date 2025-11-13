@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/pracfol/Dark_Theme_Screen.dart';
 import 'package:myapp/pracfol/Like_List.dart';
 import 'package:myapp/pracfol/LogInForm.dart';
 import 'package:myapp/pracfol/Slider.dart';
@@ -57,6 +58,16 @@ class _MyDrawerPageState extends State<MyDrawerPage> {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => BottomMenu()),
+              );
+            },
+          ),
+           ListTile(
+            leading: Icon(Icons.sunny,color: Colors.yellow,),
+            title: Text("Theme"),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => DarkThemeScreen()),
               );
             },
           ),

@@ -22,42 +22,48 @@ class Detail extends StatelessWidget {
       body: Center(
         child: Container(
           child: Column(
-            children: <Widget>[
-              GFAccordion(
-                title:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                content:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam consectetur quis eros sed elementum. Sed lacinia pretium magna at luctus. Proin accumsan, mi eget dignissim tincidunt, orci sem scelerisque tortor, nec dictum mi nulla placerat velit.',
-              ),
-
-              GFAccordion(
-                title: 'Lorem ipsum dolor sit amet,.',
-                content:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Proin accumsan, mi eget dignissim tincidunt, orci sem scelerisque tortor, nec dictum mi nulla placerat velit.',
-              ),
-
-              GFAccordion(
-                title: 'Lorem ipsum dolor sit amet,.',
-                content:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Proin accumsan, mi eget dignissim tincidunt, orci sem scelerisque tortor, nec dictum mi nulla placerat velit.',
-              ),
-              GFAccordion(
-                title:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                content:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam consectetur quis eros sed elementum. Sed lacinia pretium magna at luctus. Proin accumsan, mi eget dignissim tincidunt, orci sem scelerisque tortor, nec dictum mi nulla placerat velit.',
-              ),
-
-              GFAccordion(
-                title: 'Lorem ipsum dolor sit amet,.',
-                content:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Proin accumsan, mi eget dignissim tincidunt, orci sem scelerisque tortor, nec dictum mi nulla placerat velit.',
-              ),
-
-              GFAccordion(
-                title: 'Lorem ipsum dolor sit amet,.',
-                content:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Proin accumsan, mi eget dignissim tincidunt, orci sem scelerisque tortor, nec dictum mi nulla placerat velit.',
+            children: [
+              Expanded(
+                child: ListView(
+                  children: <Widget>[
+                    GFAccordion(
+                      title:
+                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                      content:
+                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam consectetur quis eros sed elementum. Sed lacinia pretium magna at luctus. Proin accumsan, mi eget dignissim tincidunt, orci sem scelerisque tortor, nec dictum mi nulla placerat velit.',
+                    ),
+                  
+                    GFAccordion(
+                      title: 'Lorem ipsum dolor sit amet,.',
+                      content:
+                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Proin accumsan, mi eget dignissim tincidunt, orci sem scelerisque tortor, nec dictum mi nulla placerat velit.',
+                    ),
+                  
+                    GFAccordion(
+                      title: 'Lorem ipsum dolor sit amet,.',
+                      content:
+                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Proin accumsan, mi eget dignissim tincidunt, orci sem scelerisque tortor, nec dictum mi nulla placerat velit.',
+                    ),
+                    GFAccordion(
+                      title:
+                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                      content:
+                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam consectetur quis eros sed elementum. Sed lacinia pretium magna at luctus. Proin accumsan, mi eget dignissim tincidunt, orci sem scelerisque tortor, nec dictum mi nulla placerat velit.',
+                    ),
+                  
+                    GFAccordion(
+                      title: 'Lorem ipsum dolor sit amet,.',
+                      content:
+                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Proin accumsan, mi eget dignissim tincidunt, orci sem scelerisque tortor, nec dictum mi nulla placerat velit.',
+                    ),
+                  
+                    GFAccordion(
+                      title: 'Lorem ipsum dolor sit amet,.',
+                      content:
+                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Proin accumsan, mi eget dignissim tincidunt, orci sem scelerisque tortor, nec dictum mi nulla placerat velit.',
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
