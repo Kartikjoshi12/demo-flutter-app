@@ -8,7 +8,7 @@ class MyProfilePage extends StatefulWidget {
 }
 
 class _MyProfilePageState extends State<MyProfilePage> {
-  var _level = 0;
+  var _level = 99;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class _MyProfilePageState extends State<MyProfilePage> {
               Center(
                 child: CircleAvatar(
                   backgroundImage: NetworkImage('https://i.pravatar.cc/300'),
-                  radius: 40.0,
+                  radius: 69.0,
                 ),
               ),
 
@@ -82,13 +82,16 @@ class _MyProfilePageState extends State<MyProfilePage> {
               ),
               SizedBox(height: 20.0),
 
-              FloatingActionButton(
-                child: Icon(Icons.add_ic_call),
-                onPressed: () => {
-                  setState(() {
-                    _level += 1;
-                  }),
-                },
+              Tooltip(
+                message: "LEVEL UP",
+                child: FloatingActionButton(
+                  child: Icon(Icons.add),
+                  onPressed: () => {
+                    setState(() {
+                      _level += 1;
+                    }),
+                  },
+                ),
               ),
             ],
           ),

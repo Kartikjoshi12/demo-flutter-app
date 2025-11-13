@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/pracfol/SplachScreen.dart';
 import 'package:myapp/provider/count_provider.dart';
+import 'package:myapp/provider/favourite_provider.dart';
 import 'package:myapp/provider/slider_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -16,6 +17,8 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (_) => CountProvider()),
         ChangeNotifierProvider(create: (_) => SliderValueProvider()),
+        ChangeNotifierProvider(create: (_) => FavouriteValueprovider()),
+
       ],
 
       child: MaterialApp(
