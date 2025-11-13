@@ -49,7 +49,7 @@ class _LogInFormState extends State<LogInForm> {
                   String email = _emailController.text.trim();
                   String password = _passwordController.text.trim();
 
-                  if ((email.isNotEmpty && email == "kartik@gmail.com") && (password.isNotEmpty&& password == "12345")) {
+                  if ((email.isNotEmpty && email == "k@gmail.com") && (password.isNotEmpty&& password == "123")) {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => BottomMenu()),

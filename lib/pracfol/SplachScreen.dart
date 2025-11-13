@@ -15,7 +15,7 @@ class _SplachscreenState extends State<Splachscreen> {
   void initState() {
     super.initState();
     Timer(
-      Duration(seconds: 5),
+      Duration(seconds: 2),
       () => Navigator.of(context).pushReplacement(
         MaterialPageRoute(builder: (BuildContext context) => LogInForm()),
       ),
@@ -26,7 +26,16 @@ class _SplachscreenState extends State<Splachscreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text("Company Logo", style: TextStyle(fontSize: 50.0)),
+        child:Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+             Text("🐸", style: TextStyle(fontSize: 150.0)),
+             Text("Froggy", style: TextStyle(fontSize: 15.0,  fontFamily: 'Roboto')),
+             
+          ],
+        ),
+        // child: Image.network('https://cdn-icons-png.flaticon.com/512/5968/5968705.png'),
       ),
     );
   }

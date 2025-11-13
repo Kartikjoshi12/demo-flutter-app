@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/pracfol/Dark_Theme_Screen.dart';
 import 'package:myapp/pracfol/Like_List.dart';
 import 'package:myapp/pracfol/LogInForm.dart';
 import 'package:myapp/pracfol/Slider.dart';
@@ -8,6 +7,8 @@ import 'package:myapp/pracfol/bottom.dart';
 import 'package:myapp/pracfol/loginscreen.dart';
 import 'package:myapp/pracfol/profilepage.dart';
 import 'package:myapp/pracfol/provider.dart';
+import 'package:myapp/provider/Theme_provider.dart';
+import 'package:provider/provider.dart';
 
 class MyDrawerPage extends StatefulWidget {
   const MyDrawerPage({super.key});
@@ -19,6 +20,8 @@ class MyDrawerPage extends StatefulWidget {
 class _MyDrawerPageState extends State<MyDrawerPage> {
   @override
   Widget build(BuildContext context) {
+    final themeProvider = Provider.of<ThemeChangeProvider>(context);
+    bool isDark = themeProvider.themeMode == ThemeMode.dark;
     return Drawer(
       child: Column(
         children: <Widget>[
@@ -51,8 +54,23 @@ class _MyDrawerPageState extends State<MyDrawerPage> {
               ],
             ),
           ),
+
           ListTile(
-            leading: Icon(Icons.home,color: Colors.blue,),
+            leading: Icon(
+              isDark ? Icons.light_mode : Icons.dark_mode,
+              color: isDark ? Colors.amber : Colors.grey[800],
+            ),
+            title: Text(
+              isDark ? "Switch to Light Mode" : "Switch to Dark Mode",
+            ),
+            onTap: () {
+              themeProvider.toggleTheme();
+              Navigator.pop(context); // close drawer after switching
+            },
+          ),
+
+          ListTile(
+            leading: Icon(Icons.home, color: Colors.blue),
             title: Text("Home"),
             onTap: () {
               Navigator.push(
@@ -61,18 +79,8 @@ class _MyDrawerPageState extends State<MyDrawerPage> {
               );
             },
           ),
-           ListTile(
-            leading: Icon(Icons.sunny,color: Colors.yellow,),
-            title: Text("Theme"),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => DarkThemeScreen()),
-              );
-            },
-          ),
           ListTile(
-            leading: Icon(Icons.list,color: Colors.blueAccent),
+            leading: Icon(Icons.list, color: Colors.blueAccent),
             title: Text("TO Do List"),
             onTap: () {
               Navigator.push(
@@ -83,7 +91,7 @@ class _MyDrawerPageState extends State<MyDrawerPage> {
           ),
 
           ListTile(
-            leading: Icon(Icons.countertops_sharp,color: Colors.deepPurple),
+            leading: Icon(Icons.countertops_sharp, color: Colors.deepPurple),
             title: Text("Counter"),
             onTap: () {
               Navigator.push(
@@ -94,7 +102,7 @@ class _MyDrawerPageState extends State<MyDrawerPage> {
           ),
 
           ListTile(
-            leading: Icon(Icons.slideshow_rounded,color: Colors.green),
+            leading: Icon(Icons.slideshow_rounded, color: Colors.green),
             title: Text("Slider"),
             onTap: () {
               Navigator.push(
@@ -105,7 +113,7 @@ class _MyDrawerPageState extends State<MyDrawerPage> {
           ),
 
           ListTile(
-            leading: Icon(Icons.favorite,color: Colors.red),
+            leading: Icon(Icons.favorite, color: Colors.red),
             title: Text("liked"),
             onTap: () {
               Navigator.push(
@@ -116,7 +124,7 @@ class _MyDrawerPageState extends State<MyDrawerPage> {
           ),
 
           ListTile(
-            leading: Icon(Icons.login,color: Colors.blueGrey),
+            leading: Icon(Icons.login, color: Colors.blueGrey),
             title: Text("LogIn"),
             onTap: () {
               Navigator.push(
@@ -126,7 +134,7 @@ class _MyDrawerPageState extends State<MyDrawerPage> {
             },
           ),
           ListTile(
-            leading: Icon(Icons.logout,color: Colors.amberAccent),
+            leading: Icon(Icons.logout, color: Colors.amberAccent),
             title: Text("Logout"),
             onTap: () {
               Navigator.push(
