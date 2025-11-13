@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
@@ -9,10 +10,17 @@ class MyCarasol extends StatefulWidget {
 }
 
 class _MyCarasolState extends State<MyCarasol> {
-  final List<String> _images = List.generate(
-    6,
-    (i) => "https://picsum.photos/seed/$i/400/250",
-  );
+  final random = Random();
+  late List<String> _images; // declare first, initialize later
+
+  @override
+  void initState() {
+    super.initState();
+    _images = List.generate(
+      10,
+      (i) => "https://picsum.photos/seed/${random.nextInt(10000)}/500/350",
+    );
+  }
 
   @override
   Widget build(BuildContext context) {

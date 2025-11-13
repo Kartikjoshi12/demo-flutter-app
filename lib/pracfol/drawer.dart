@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/pracfol/LogInForm.dart';
+import 'package:myapp/pracfol/Slider.dart';
 import 'package:myapp/pracfol/To_do.dart';
 import 'package:myapp/pracfol/bottom.dart';
 import 'package:myapp/pracfol/loginscreen.dart';
@@ -72,6 +73,17 @@ class _MyDrawerPageState extends State<MyDrawerPage> {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => MyProviderExamp()),
+              );
+            },
+          ),
+
+             ListTile(
+            leading: Icon(Icons.slideshow_rounded),
+            title: Text("Slider"),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => SliderProvider()),
               );
             },
           ),
