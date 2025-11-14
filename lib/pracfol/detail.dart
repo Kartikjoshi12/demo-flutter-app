@@ -15,7 +15,6 @@ class Detail extends StatelessWidget {
         title: Container(
           height: 100,
           width: double.infinity,
-          color: Colors.amber,
           child: Center(child: Text("About Us")),
         ),
       ),

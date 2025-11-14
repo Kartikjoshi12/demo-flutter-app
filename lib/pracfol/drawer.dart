@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:myapp/pracfol/Like_List.dart';
 import 'package:myapp/pracfol/LogInForm.dart';
 import 'package:myapp/pracfol/Slider.dart';
+import 'package:myapp/pracfol/Stateless_to_Stateful.dart';
 import 'package:myapp/pracfol/To_do.dart';
 import 'package:myapp/pracfol/bottom.dart';
 import 'package:myapp/pracfol/loginscreen.dart';
@@ -22,6 +23,7 @@ class _MyDrawerPageState extends State<MyDrawerPage> {
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeChangeProvider>(context);
     bool isDark = themeProvider.themeMode == ThemeMode.dark;
+
     return Drawer(
       child: Column(
         children: <Widget>[
@@ -60,9 +62,7 @@ class _MyDrawerPageState extends State<MyDrawerPage> {
               isDark ? Icons.light_mode : Icons.dark_mode,
               color: isDark ? Colors.amber : Colors.grey[800],
             ),
-            title: Text(
-              isDark ? "Switch to Light Mode" : "Switch to Dark Mode",
-            ),
+            title: Text(isDark ? "Light" : "Dark"),
             onTap: () {
               themeProvider.toggleTheme();
               Navigator.pop(context); // close drawer after switching
@@ -122,7 +122,16 @@ class _MyDrawerPageState extends State<MyDrawerPage> {
               );
             },
           ),
-
+          ListTile(
+            leading: Icon(Icons.add_alert, color: const Color.fromARGB(255, 64, 116, 43)),
+            title: Text("Adder"),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => UseStatefulWithless()),
+              );
+            },
+          ),
           ListTile(
             leading: Icon(Icons.login, color: Colors.blueGrey),
             title: Text("LogIn"),

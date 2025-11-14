@@ -24,7 +24,6 @@ class _SnackBarDemoState extends State<SnackBarDemo> {
 
         ScaffoldMessenger.of(context).showSnackBar(snackBar);
       },
-
       child: const Text("Show SnackBar"),
     );
   }

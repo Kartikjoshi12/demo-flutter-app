@@ -16,8 +16,8 @@ class LikeList extends StatelessWidget {
             onTap: (){
               Navigator.push(context,MaterialPageRoute(builder: (context)=>LikedOnlyList()));
             },
-            child: Icon(Icons.favorite,
-            color: Colors.red),
+            child: Icon(Icons.open_in_new,
+            color: const Color.fromARGB(255, 109, 104, 104)),
           ),
           SizedBox(width: 20.0,),
         ],

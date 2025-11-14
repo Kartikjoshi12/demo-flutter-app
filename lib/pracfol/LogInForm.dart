@@ -11,7 +11,8 @@ class LogInForm extends StatefulWidget {
 class _LogInFormState extends State<LogInForm> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-
+  bool _hide = false;
+  var _textmsg = "Ha bhai hacker!";
   String message = "";
   @override
   Widget build(BuildContext context) {
@@ -34,14 +35,25 @@ class _LogInFormState extends State<LogInForm> {
               keyboardType: TextInputType.emailAddress,
             ),
             const SizedBox(height: 18),
+
             TextField(
               controller: _passwordController,
-              decoration: const InputDecoration(
+              obscureText: _hide,
+              decoration: InputDecoration(
                 labelText: "Password",
                 border: OutlineInputBorder(),
+                suffixIcon: IconButton(
+                  icon: Icon(_hide ? Icons.visibility_off_outlined : Icons.visibility),
+                  onPressed: () {
+                    setState(() {
+                      _hide = !_hide; // toggle
+                    });
+                  },
+                ),
               ),
-              obscureText: true,
+              keyboardType: TextInputType.text,
             ),
+
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
@@ -49,13 +61,14 @@ class _LogInFormState extends State<LogInForm> {
                   String email = _emailController.text.trim();
                   String password = _passwordController.text.trim();
 
-                  if ((email.isNotEmpty && email == "k@gmail.com") && (password.isNotEmpty&& password == "123")) {
+                  if ((email.isNotEmpty && email == "k@gmail.com") &&
+                      (password.isNotEmpty && password == "123")) {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => BottomMenu()),
                     );
                   } else {
-                    message = "Wrong Email or Password";
+                    message = '${_textmsg} 😏';
                   }
                 });
                 // Navigator.push(

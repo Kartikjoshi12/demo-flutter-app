@@ -43,18 +43,14 @@ class _MyTodoListState extends State<MyTodoList> {
             final todos = snapshot.data!;
 
             return ListView.builder(
-
               itemCount: todos.length,
-              itemBuilder: (context, index) {
 
+              itemBuilder: (context, index) {
                 final todo = todos[index];
 
                 return ListTile(
-
                   leading: Text(todo.id.toString()),
-
                   title: Text(todo.title),
-                  
                   trailing: Icon(
                     todo.completed ? Icons.check_circle : Icons.pending,
                     color: todo.completed ? Colors.green : Colors.grey,
